@@ -1,0 +1,20 @@
+<h2 class="mat-h2">Mailing</h2>
+
+<div class="mat-form-field">
+  <label for="recipients" class="mat-form-field-label font-semibold">Recipients:</label>
+  <input matInput type="text" id="recipients" [(ngModel)]="recipients">
+</div>
+
+<div class="mat-form-field">
+  <label for="subject" class="mat-form-field-label font-semibold">Subject:</label>
+  <input matInput type="text" id="subject" [(ngModel)]="subject">
+</div>
+
+<div class="mat-form-field">
+  <label for="content" class="mat-form-field-label font-semibold">Content:</label>
+  <div class="editor-container">
+    <ngx-editor [editor]="editor" [(ngModel)]="content" placeholder="Enter email content..." spellcheck="true" autofocus="false"></ngx-editor>
+  </div>
+</div>
+
+<button mat-raised-button color="primary" (click)="sendEmail()">Send Email</button>

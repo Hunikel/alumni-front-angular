@@ -1,0 +1,29 @@
+<h2 class="text-xl font-bold mb-4">Post an Ad</h2>
+
+<form (submit)="postAd()" class="mb-4">
+  <mat-form-field class="mb-2">
+    <mat-label>Title:</mat-label>
+    <input matInput type="text" id="title" [(ngModel)]="ad.title" required>
+  </mat-form-field>
+
+  <mat-form-field class="mb-2">
+    <mat-label>Content:</mat-label>
+    <textarea matInput id="content" [(ngModel)]="ad.content" required></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="mb-2">
+    <mat-label>File Name:</mat-label>
+    <input matInput type="text" id="fileName" [(ngModel)]="ad.fileName">
+  </mat-form-field>
+
+  <mat-form-field class="mb-2">
+    <mat-label>Job Type:</mat-label>
+    <mat-select id="jobType" [(ngModel)]="ad.jobType" required>
+      <mat-option value="FULL_TIME">Full Time</mat-option>
+      <mat-option value="PART_TIME">Part Time</mat-option>
+      <mat-option value="INTERNSHIP">Internship</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Post Ad</button>
+</form>

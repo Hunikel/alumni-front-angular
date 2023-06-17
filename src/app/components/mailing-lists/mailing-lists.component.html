@@ -1,0 +1,13 @@
+<h1 class="text-2xl font-bold">Mailing Lists</h1>
+
+<div class="mb-4">
+  <input type="text" [(ngModel)]="newMailingListName" placeholder="Enter a new mailing list name" class="border border-gray-300 rounded py-2 px-3">
+  <button (click)="createMailingList()" class="bg-blue-500 hover:bg-blue-600 text-white rounded py-2 px-4">Create</button>
+</div>
+
+<ul>
+  <li *ngFor="let mailingList of mailingLists" class="mb-2">
+    <span class="mr-2">{{ mailingList.name }}</span>
+    <button (click)="deleteMailingList(mailingList.id)" class="bg-red-500 hover:bg-red-600 text-white rounded py-1 px-2">Delete</button>
+  </li>
+</ul>

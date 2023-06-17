@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div class="card" *ngFor="let job of jobs" (click)="openJobDetailsModal(job)">
+    <div class="card-header">
+      <h3 class="text-xl font-bold">{{ job.title }}</h3>
+    </div>
+    <div class="card-body">
+      <p class="text-gray-700">{{ job.content | slice:0:150 }}...</p>
+    </div>
+    <div class="card-footer">
+      <button class="bg-blue-500 hover:bg-blue-600 text-white rounded px-4 py-2">Read More</button>
+    </div>
+  </div>
+</div>

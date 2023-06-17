@@ -1,0 +1,32 @@
+<h2 class="text-2xl font-bold mb-4">Cotisation</h2>
+
+<form (ngSubmit)="processPayment()" class="max-w-md">
+
+  <mat-form-field class="mb-4">
+    <mat-label>Name:</mat-label>
+    <input matInput type="text" [(ngModel)]="payment.name" required>
+  </mat-form-field>
+
+  <mat-form-field class="mb-4">
+    <mat-label>Card Number:</mat-label>
+    <input matInput type="text" [(ngModel)]="payment.number" required>
+  </mat-form-field>
+
+  <mat-form-field class="mb-4">
+    <mat-label>Expiration Date:</mat-label>
+    <input matInput type="text" [(ngModel)]="payment.expirationDate" required>
+  </mat-form-field>
+
+  <mat-form-field class="mb-4">
+    <mat-label>CVC:</mat-label>
+    <input matInput type="text" [(ngModel)]="payment.cvc" required>
+  </mat-form-field>
+
+  <mat-form-field class="mb-4">
+    <mat-label>Amount:</mat-label>
+    <input matInput type="number" [(ngModel)]="payment.amount" required>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" class="mb-4" color="primary">Process Payment</button>
+
+</form>
